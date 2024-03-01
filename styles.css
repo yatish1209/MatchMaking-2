@@ -6,18 +6,18 @@ body {
 }
 
 .container {
-    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
     background-color: #fff;
     border-radius: 5px;
-    margin: 20px auto;
-    max-width: 400px;
-    text-align: center;
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 p {
@@ -26,46 +26,43 @@ p {
     margin-bottom: 20px;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.collectdatabtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+.get-location-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    cursor: pointer;
-    width: 100%;
     border-radius: 5px;
-    font-size: 16px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.collectdatabtn:hover {
-    background-color: #45a049;
-}
-
-#outputContainer {
-    display: none;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    margin: 20px auto;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#outputContainer h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.get-location-btn:hover {
+    background-color: #0056b3;
 }
 
 #output {
+    margin-top: 20px;
     font-size: 18px;
-    color: #333;
+    text-align: left;
+}
+
+#map-container {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#map {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+#marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
 }
